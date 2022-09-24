@@ -1,4 +1,4 @@
-package com.lti.entitiy;
+package com.lti.entity;
 
 import java.time.LocalDate;
 
@@ -7,24 +7,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="RegisteredUsers")
+@Table(name="RegisteredUser")
 public class User {
 
 	@Id
-	private int uid;
+	private int user_Id;
 	private String fname;
+	private String lname;
 	private String gender;
-	private String phoneNo;
+	private long phoneNo;
 	private String address;
 	private String mail;
 	private String pwd;
 	private double wallet;
 	private LocalDate dob;
-	public int getUid() {
-		return uid;
+	public int getUser_Id() {
+		return user_Id;
 	}
-	public void setUid(int uid) {
-		this.uid = uid;
+	public void setUser_Id(int user_Id) {
+		this.user_Id = user_Id;
 	}
 	public String getFname() {
 		return fname;
@@ -32,16 +33,22 @@ public class User {
 	public void setFname(String fname) {
 		this.fname = fname;
 	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
 	public String getGender() {
 		return gender;
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getPhoneNo() {
+	public long getPhoneNo() {
 		return phoneNo;
 	}
-	public void setPhoneNo(String phoneNo) {
+	public void setPhoneNo(long phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 	public String getAddress() {
@@ -76,10 +83,15 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [uid=" + uid + ", fname=" + fname + ", gender=" + gender + ", phoneNo=" + phoneNo + ", address="
-				+ address + ", mail=" + mail + ", pwd=" + pwd + ", wallet=" + wallet + ", dob=" + dob + "]";
+		return "User [user_Id=" + user_Id + ", fname=" + fname + ", lname=" + lname + ", gender=" + gender
+				+ ", phoneNo=" + phoneNo + ", address=" + address + ", mail=" + mail + ", pwd=" + pwd + ", wallet="
+				+ wallet + ", dob=" + dob + "]";
 	}
 	
 	
 	
+	
+	
 }
+	
+	
